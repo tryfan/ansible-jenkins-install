@@ -2,6 +2,12 @@
   become: true
   vars:
     jenkins_hostname: "{{ play_hosts[0] }}"
+  pre_tasks:
+    - name: Install QEMU
+      package:
+        name: libvirt
+        state: present
   roles:
+    - role: geerlingguy.packer
     - role: geerlingguy.java
     - role: geerlingguy.jenkins

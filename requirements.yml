@@ -1,3 +1,6 @@
+- src: https://github.com/geerlingguy/ansible-role-packer
+  name: geerlingguy.packer
+
 - src: https://github.com/geerlingguy/ansible-role-jenkins
   name: geerlingguy.jenkins
 
