@@ -1,0 +1,5 @@
+- src: https://github.com/geerlingguy/ansible-role-jenkins
+  name: geerlingguy.jenkins
+
+- src: https://github.com/geerlingguy/ansible-role-java
+  name: geerlingguy.java
