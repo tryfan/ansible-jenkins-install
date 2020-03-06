@@ -5,8 +5,11 @@
   pre_tasks:
     - name: Install QEMU
       package:
-        name: libvirt
+        name: "{{ item }}"
         state: present
+      loop:
+        - libvirt
+        - qemu-kvm
   roles:
     - role: geerlingguy.packer
     - role: geerlingguy.java
