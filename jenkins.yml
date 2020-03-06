@@ -11,7 +11,7 @@
     - role: geerlingguy.packer
     - role: geerlingguy.java
     - role: geerlingguy.jenkins
-  tasks:
+  post_tasks:
     - name: Add symbolic link for Qemu binary
       file:
         src: /usr/libexec/qemu-kvm
