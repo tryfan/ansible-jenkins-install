@@ -2,21 +2,6 @@
   become: true
   vars:
     jenkins_hostname: "{{ play_hosts[0] }}"
-  pre_tasks:
-    - name: Install QEMU
-      package:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - libvirt
-        - qemu-kvm
   roles:
-    - role: geerlingguy.packer
     - role: geerlingguy.java
     - role: geerlingguy.jenkins
-  post_tasks:
-    - name: Add symbolic link for Qemu binary
-      file:
-        src: /usr/libexec/qemu-kvm
-        dest: /usr/local/bin/qemu-system-x86_64
-        state: link
