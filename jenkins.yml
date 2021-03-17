@@ -3,5 +3,6 @@
   vars:
     jenkins_hostname: "{{ play_hosts[0] }}"
   roles:
+    - role: geerlingguy.packer
     - role: geerlingguy.java
     - role: geerlingguy.jenkins
