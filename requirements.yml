@@ -1,3 +1,6 @@
+- src: https://github.com/geerlingguy/ansible-role-repo-epel
+  name: geerlingguy.epel
+
 - src: https://github.com/geerlingguy/ansible-role-packer
   name: geerlingguy.packer
 
